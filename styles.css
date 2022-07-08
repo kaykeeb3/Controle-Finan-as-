@@ -1,0 +1,394 @@
+:root {
+    --dark-blue: #363f5f;
+    --green: #49AA26;
+    --light-green: #3dd705;
+    --red: #e92929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    
+}
+
+.container {
+    width: min(90vw, 850px);
+    margin: auto;
+}
+
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: black;
+    font-weight: normal;
+}
+
+a{
+    color: #49AA26;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--green);
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background: var(--green);
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--light-green);
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.button.cancel:hover {
+    opacity: 2;
+}
+
+header {
+    background: #409ce6;
+    padding: 4rem 0 12rem;
+    text-align: center;
+}
+
+header img {
+    width: 6.5rem;
+    height: 7rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#logo {
+    color: #fff;
+    font-weight: 100;
+}
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color: white;
+    margin-top:0;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--dark-blue);
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card.total{
+    background: #36ce82;
+    color: white;
+}
+
+#busca{
+    width: 100%;
+    justify-content: right;
+    display: flex;
+    margin-top: -2.3rem;
+    margin-bottom: 1rem;
+    
+}
+
+.mobile{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #7a7a7b;
+    background: white;
+    opacity: 0.7;
+}
+
+.mobile thead th {
+    background: white;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+.mobile thead th:nth-child(1) {
+    width: 43.4%;
+}
+.mobile thead th:nth-child(2) {
+    width: 24.1%;
+}
+
+
+
+.descriptionDiv::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+    background: linear-gradient(to top, #00ccff, #0059ff);
+    
+}
+
+  .descriptionDiv::-webkit-scrollbar{
+      top: 0;
+      right: 0;
+      width: 5px;
+      background: rgba(8, 2, 65, 0.411);
+      height: 0.5rem;
+  }
+
+  
+.descriptionDiv{
+    overflow: scroll;
+    width: 15rem;
+    height: 6rem;
+  
+}
+.div {
+    width: 99%;     
+}
+
+
+#transaction{
+    width: 100%;
+    overflow-y: scroll;
+    height: 30rem;
+    margin-top: 1rem;
+    margin-left: 0rem;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #7a7a7b;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table thead th{
+    background: white;
+    opacity: 0.9;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+    background: fixed;
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table tbody td {
+    background: white;
+    padding: 1rem 2rem; 
+}
+
+td.description {
+    color: var(--dark-blue);
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #e92929;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #F0F2f5;
+    padding: 2.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+#form form input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+
+
+.input-group{
+    margin-top: 0.8rem;   
+}
+
+.input-group small {
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}  
+
+
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--dark-blue);
+    opacity: 0.6;
+}
+
+footer img {
+    width: 1rem;
+}
+
+@media screen and (max-width: 1080px){
+    
+    
+.top{
+    visibility: visible;
+}
+.mobile{
+    visibility: visible;
+    height: 1rem;
+}
+
+    table thead th{
+        background: white;
+        opacity: 0.7;
+        font-weight: normal;
+        text-align: center;
+        background: fixed;
+        padding: 1.8rem 1rem;
+        width: 50rem;
+    }
+
+     thead th:nth-child(1) {
+        
+        
+    }
+    thead th:nth-child(2) {
+        
+    }
+    .descriptionDiv{
+        overflow: none;
+        width: 11rem;
+        height: 4rem;
+    }
+
+    .div {
+        width: 99%;     
+    }
+}
+
+@media (min-width: 800px) {
+    html{
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+}
